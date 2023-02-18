@@ -4,7 +4,6 @@ import {
   BookmarkSimple,
   DotsThreeCircle,
   Envelope,
-  FileText,
   Hash,
   House,
   User
@@ -39,10 +38,6 @@ export function Sidebar() {
         <a href="">
           <BookmarkSimple />
           Bookmarks
-        </a>
-        <a href="">
-          <FileText />
-          Lists
         </a>
         <a href="">
           <User />

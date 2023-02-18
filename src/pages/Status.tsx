@@ -1,21 +1,36 @@
-import './Status.css';
+import { FormEvent, useState } from 'react';
 
 import { Header } from '../components/Header';
 import { Tweet } from '../components/Tweet';
 
-const answers = ['Agree!', 'Makes Sense', 'Congratulations!'];
+import './Status.css';
 
 export function Status() {
+  const [newAnswer, setNewAnswer] = useState('');
+  const [answers, setAnswers] = useState(['Agree!']);
+
+  function createNewAnswer(event: FormEvent) {
+    event.preventDefault();
+
+    setAnswers([newAnswer, ...answers]);
+    setNewAnswer('');
+  }
+
   return (
     <main className="status">
       <Header title="Tweet" />
 
       <Tweet content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id deleniti ex sit, recusandae aut obcaecati vero ab ratione odit neque! Velit nobis, omnis dolore vel maxime perspiciatis quos numquam magni." />
 
-      <form className="answer-tweet-form">
+      <form className="answer-tweet-form" onSubmit={createNewAnswer}>
         <label htmlFor="tweet">
           <img src="https://github.com/bonattii.png" alt="Rodrigo Bonatti" />
-          <textarea id="tweet" placeholder="Tweet your Answer" />
+          <textarea
+            id="tweet"
+            placeholder="Tweet your Answer"
+            value={newAnswer}
+            onChange={event => setNewAnswer(event.target.value)}
+          />
         </label>
 
         <button type="submit">Answer</button>
