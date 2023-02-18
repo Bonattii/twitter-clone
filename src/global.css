@@ -37,81 +37,13 @@ a {
   max-width: 1000px;
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem 1.25rem;
-}
-
-.sidebar .logo {
-  height: 2rem;
-  width: 2rem;
-}
-
-.sidebar .new-tweet {
-  background-color: var(--twitter-blue);
-  border: 0;
-  border-radius: 9999px;
-  color: #fff;
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 900;
-  justify-content: center;
-  padding: 1rem;
-  width: 100%;
-}
-
-.sidebar .new-tweet:hover {
-  filter: brightness(0.9);
-}
-
-.main-navigation {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.main-navigation a {
-  align-items: center;
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 700;
-  gap: 1.25rem;
-  text-decoration: none;
-}
-
-.main-navigation a.active {
-  color: var(--twitter-blue);
-}
-
-.main-navigation a svg {
-  height: 2rem;
-  width: 2rem;
-}
-
 .content {
   border-left: 1px solid #ebeef0;
   border-right: 1px solid #ebeef0;
 }
 
-.timeline-header {
-  align-items: center;
-  border-bottom: 1px solid #ebeef0;
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 700;
-  justify-content: space-between;
-  padding: 1.5rem 1.25rem;
-}
-
-.timeline-header svg {
-  color: var(--twitter-blue);
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
 .new-tweet-form {
+  border-bottom: 1px solid #ebeef0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -159,11 +91,4 @@ a {
 
 .new-tweet-form button[type='submit']:hover {
   filter: brightness(0.9);
-}
-
-.separator {
-  background-color: #f7f9fa;
-  border-bottom: 1px solid #ebeef0;
-  border-top: 1px solid #ebeef0;
-  height: 0.75rem;
 }
