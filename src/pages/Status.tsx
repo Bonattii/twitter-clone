@@ -1,4 +1,5 @@
 import { FormEvent, KeyboardEvent, useState } from 'react';
+import { PaperPlaneRight } from 'phosphor-react';
 
 import { Header } from '../components/Header';
 import { Tweet } from '../components/Tweet';
@@ -41,7 +42,10 @@ export function Status() {
           />
         </label>
 
-        <button type="submit">Answer</button>
+        <button type="submit">
+          <PaperPlaneRight />
+          <span>Answer</span>
+        </button>
       </form>
 
       {answers.map(answer => (
