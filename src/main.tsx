@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client';
 
 import './global.css';
 
-import { Tweet } from './components/Tweet';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
+import { Tweet } from './components/Tweet';
+
+const tweets = ['My first tweet', 'Test', 'Successfully tweeted'];
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -28,12 +30,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <button type="submit">Tweet</button>
           </form>
 
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {tweets.map(tweet => (
+            <Tweet key={tweet} content={tweet} />
+          ))}
         </main>
       </div>
     </div>
